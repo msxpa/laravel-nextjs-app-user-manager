@@ -1,0 +1,11 @@
+.git
+.vscode
+node_modules
+vendor
+storage/*.log
+.env
+.DS_Store
+*.sqlite
+*.sqlite-journal
+.idea
+.next
