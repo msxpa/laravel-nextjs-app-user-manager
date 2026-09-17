@@ -1,14 +1,14 @@
+Установка Laravel (13)  
 ```
-bash
-# В контейнере Laravel
-php artisan make:model User -m
-php artisan make:controller Api/AuthController
-php artisan make:controller Api/ProfileController
+composer create-project laravel/laravel ./ --no-interaction
 ```
 
-
+Проверка миграций   
 ```
-composer require laravel/sanctum
-php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-php artisan migrate
+sudo docker exec -it laravel_database psql -U laravel -d laravel -c "\dt"
+```
+
+Запусти миграции  
+```
+sudo docker exec -it laravel_php bash -c "cd /var/www/html && php artisan migrate:fresh --force"
 ```

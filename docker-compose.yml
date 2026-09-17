@@ -18,7 +18,7 @@ services:
   # PHP-FPM
   php:
     build:
-      context: ./backend
+      context: ./docker/php
       dockerfile: Dockerfile
     container_name: laravel_php
     volumes:
@@ -39,7 +39,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./docker/volumes/postgres:/var/lib/postgresql/data
     networks:
       - app-network
 
