@@ -49,4 +49,4 @@ logs/
 docker-compose.override.yml
 
 # Локальные данные Docker (БД, кэш) - НЕ в git
-docker/volumes/
+docker/volumes/*
